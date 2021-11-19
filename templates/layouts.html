@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+ <!-- Mirrored from srrafi.com/form-demo/formify/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Nov 2021 12:59:44 GMT -->
+ <head>
+    {% load static %}
+  <!-- Required meta tags -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <!-- Bootstrap CSS -->
+  <link href="{% static 'assets/vendors/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"/>
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet"/>
+  <link href="{% static 'assets/css/responsive.css' %}" rel="stylesheet"/>
+  <title>
+    Quiz App
+  </title>
+ </head>
+ <body>
+  {% block content %}
+
+    {% endblock %}
+  <!-- Optional JavaScript; choose one of the two! -->
+  <script src="{% static 'assets/js/jquery-3.4.1.min.js' %}">
+  </script>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="{% static 'assets/vendors/bootstrap/js/popper.min.js' %}">
+  </script>
+  <script src="{% static 'assets/vendors/bootstrap/js/bootstrap.min.js' %}">
+  </script>
+  <script src="{% static 'assets/js/main.js' %}">
+  </script>
+ </body>
+</html>

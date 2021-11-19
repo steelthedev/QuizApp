@@ -1,0 +1,75 @@
+
+{% extends 'layouts.html' %}
+{% load static %}
+{% block content %}
+<div class="formify_body" data-bg-color="#E3F0FF">
+ <div class="f_content">
+  <div class="container-fluid custom_container">
+   <div class="row">
+    <div class="col-lg-6 formify_content_left text-center">
+     <div class="formify_logo_wrapper">
+      <a href="index-2.html">
+       <img alt="" src="{% static 'assets/img/logo.png' %}"/>
+      </a>
+      <p>
+       Complete set of digital forms
+      </p>
+     </div>
+     <img alt="" class="img-fluid img" src="{% static 'assets/img/chat-left.png' %}"/>
+    </div>
+    <div class="col-lg-6 formify_content_right">
+     <div class="formify_box ml-auto mr-auto">
+      <h4 class="form_title">
+       Sign up to Quiz
+     
+      <div class="text-center">
+    
+      </div>
+      <form action="{% url 'app:home' %}" method="post" class="signup_form">
+          {% csrf_token %}
+
+          {% if messages %}
+
+          {% for m in messages %}
+           <small>{{m.message}}</small> 
+          {% endfor %}
+          {% endif %}
+       <div class="form-group">
+        <label class="input_title" for="inputName">
+         Name
+        </label>
+        <input class="form-control" id="inputName" name="name" placeholder="Enter Your Name" required type="text"/>
+       </div>
+       <div class="form-group">
+        <label class="input_title" for="inputEmail">
+         Email
+        </label>
+        <input class="form-control" id="inputEmail" name="email" placeholder="Email address" required type="email"/>
+       </div>
+       <div class="form-group">
+        <label class="input_title" for="inputPassword">
+         Token
+        </label>
+        <input class="form-control" id="inputPassword" name="token" placeholder="Token" required type="text"/>
+       </div>
+       <div class="form-group">
+        <button class="btn action_btn thm_btn" type="submit">
+         Sign up
+        </button>
+       </div>
+       <p class="form_footer_text">
+        Already have an account?
+        <a href="index-1.html">
+         Sign in
+        </a>
+       </p>
+      </form>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+{% endblock %}
+<!-- Mirrored from srrafi.com/form-demo/formify/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Nov 2021 12:59:52 GMT -->
